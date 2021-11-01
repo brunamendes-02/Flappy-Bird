@@ -104,13 +104,13 @@ function Progresso() {
 
 
 function estaoSobrepostos(elementoA, elementoB){
-    const a = elementoA.getBoundingClientRect()
-    const b = elementoB.getBoundingClientRect()
+    const passaro = elementoA.getBoundingClientRect()
+    const barreira = elementoB.getBoundingClientRect()
 
-    const horizontal = a.left + a.width >= b.left 
-        && b.left + b.width >= a.left
-    const vertical = a.top + a.height >= b.top
-        && b.top + b.height >= a.top
+    const horizontal = passaro.left + passaro.width >= barreira.left 
+        && barreira.left + barreira.width >= passaro.left
+    const vertical = passaro.top + passaro.height >= barreira.top
+        && barreira.top + barreira.height >= passaro.top
 
     return horizontal && vertical
 }
